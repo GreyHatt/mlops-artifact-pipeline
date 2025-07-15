@@ -53,6 +53,6 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: trained-model
-          path: models/model_train.pkl
+          path: .
       - name: Run Inference Script
         run: python src/inference.py
