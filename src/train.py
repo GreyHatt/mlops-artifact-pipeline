@@ -1,3 +1,4 @@
+import os
 import json
 import pickle
 from pathlib import Path
@@ -36,6 +37,7 @@ def train_model(config, digits):
 
 def save_model(model, path):
     """Save the trained model to a file."""
+    os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, 'wb') as f:
         pickle.dump(model, f)
     print(f"Model saved to {path}")
