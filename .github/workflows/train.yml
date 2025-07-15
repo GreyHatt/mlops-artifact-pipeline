@@ -20,4 +20,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: trained-model
-          path: src/models/model_train.pkl
+          path: models/model_train.pkl
